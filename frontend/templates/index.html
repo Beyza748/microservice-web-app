@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mikroservis Web</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🚀 Mikroservis Mimarili Web</h1>
+
+<div class="box">
+    <h2>🛒 Ürünler</h2>
+    <ul>
+        {% for p in products %}
+            <li>{{ p.title }} - {{ p.price }} ₺</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="box">
+    <h2>📅 Türkiye Resmi Tatiller</h2>
+    <ul>
+        {% for h in holidays %}
+            <li>{{ h.date }} - {{ h.localName }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
